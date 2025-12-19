@@ -166,49 +166,4 @@ function sendWhatsApp() {
 </script>
 
 </body>
-</html><label>Problem:</label>
-<textarea id="problem" placeholder="Apni samasya likhe"></textarea>
-
-<br>
-<button class="btn" onclick="sendWhatsApp()">WhatsApp par bheje</button>
-</div>
-
-<script>
-function sendWhatsApp() {
-  var name = document.getElementById("name").value;
-  var dob = document.getElementById("dob").value;
-  var problem = document.getElementById("problem").value;
-
-  if(name === "" || dob === "" || problem === ""){
-    alert("Kripya Naam, Date of Birth aur Problem bhare");
-    return;
-  }
-
-  var message = 
-    "Naam: " + name + "%0A" +
-    "Date of Birth: " + dob + "%0A" +
-    "Problem: " + problem;
-
-  var url = "https://wa.me/919359338389?text=" + message;
-  window.open(url, "_blank");
-}
-</script>
-
-<div class="card">
-<h2>Contact</h2>
-<p><strong>📞 Mobile:</strong> 9359338389</p>
-<a class="btn" href="https://wa.me/919359338389">WhatsApp Now</a>
-</div>
-
-</section>
-
-<footer>
-© 2025 Swamisevaa Astrology
-<div style="text-align:center;margin-top:20px;">
-<a href="privacy.html">Privacy Policy</a> |
-<a href="terms.html">Terms & Conditions</a>
-  </div>
-</footer>
-
-</body>
 </html>
