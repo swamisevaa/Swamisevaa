@@ -99,19 +99,40 @@ Anubhav aur vishwas ke saath seva.
 
 <div class="card">
 <h2>Online Jyotish Salah</h2>
-<form>
+
 <label>Naam:</label>
-<input type="text" placeholder="Aapka naam">
+<input type="text" id="name" placeholder="Aapka naam">
 
 <label>Date of Birth:</label>
-<input type="date">
+<input type="date" id="dob">
 
 <label>Problem:</label>
-<textarea placeholder="Apni samasya likhe"></textarea>
+<textarea id="problem" placeholder="Apni samasya likhe"></textarea>
 
-<a class="btn" href="https://wa.me/919359338389">WhatsApp par bheje</a>
-</form>
+<br>
+<button class="btn" onclick="sendWhatsApp()">WhatsApp par bheje</button>
 </div>
+
+<script>
+function sendWhatsApp() {
+  var name = document.getElementById("name").value;
+  var dob = document.getElementById("dob").value;
+  var problem = document.getElementById("problem").value;
+
+  if(name === "" || dob === "" || problem === ""){
+    alert("Kripya Naam, Date of Birth aur Problem bhare");
+    return;
+  }
+
+  var message = 
+    "Naam: " + name + "%0A" +
+    "Date of Birth: " + dob + "%0A" +
+    "Problem: " + problem;
+
+  var url = "https://wa.me/919359338389?text=" + message;
+  window.open(url, "_blank");
+}
+</script>
 
 <div class="card">
 <h2>Contact</h2>
